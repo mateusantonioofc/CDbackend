@@ -1,9 +1,23 @@
-function calcular() {
+const banho = 9;
+const louca = 7;
+const descarga = 12;
 
-    let litros = 0;
+function banho(quantidade) {
+    return quantidade * banho;
+}
 
-    const banho = 9;
-    const louca = 7;
-    const descarga = 12;
+function descarga(quantidade) {
+    return quantidade * descarga;
+}
 
+function descarga(quantidade) {
+    return quantidade * descarga;
+}
+
+function descarga(quantidade) {
+    return quantidade * descarga;
+}
+
+function descarga(quantidade) {
+    return quantidade * descarga;
 }
