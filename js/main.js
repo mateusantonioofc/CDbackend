@@ -1,3 +1,7 @@
+document.getElementById('form').addEventListener('submit', function(event) { // lembrete: trocar para o id do form
+    
+});
+
 function calcularQuantidadeArvores(litros) {
     const litrosPorArvore = 100; // alterar para o numero real
     return litros / litrosPorArvore;
