@@ -3,7 +3,7 @@ document.getElementById('form').addEventListener('submit', function(event) { // 
 });
 
 function calcularQuantidadeArvores(litros) {
-    const litrosPorArvore = 100; // alterar para o numero real
+    const litrosPorArvore = 1000;
     return litros / litrosPorArvore;
 }
 
@@ -14,7 +14,28 @@ function banho(quantidade, duracao) {
     return litrosPorMinuto * duracaoTotal;
 }
 
+function lavarLouca(quantidade, duracao) {
+    const duracaoTotal = quantidade * duracao;
+    const litrosPorMinuto = 7;
+    return litrosPorMinuto * litrosPorMinuto;
+}
+
+function lavarMaos(quantidade) {
+    const litros = 7;
+    return quantidade * litros;
+}
+
+function lavarRoupas(quantidade) {
+    const litros = 195;
+    return quantidade * litros;
+}
+
+function escovarDestes(quantidade) {
+    const litros = 4.8;
+    return quantidade * litros
+}
+
 function descarga(quantidade) {
-    const litrosPorMinuto = 12; // alterar para o valor real
+    const litrosPorMinuto = 12;
     return quantidade * litrosPorMinuto;
 }
