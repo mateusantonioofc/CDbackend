@@ -21,18 +21,18 @@ function lavarLouca(quantidade, duracao) {
 }
 
 function lavarMaos(quantidade) {
-    const litros = 7;
-    return quantidade * litros;
+    const litrosLavarMaos = 7;
+    return quantidade * litrosLavarMaos;
 }
 
 function lavarRoupas(quantidade) {
-    const litros = 195;
-    return quantidade * litros;
+    const litrosLavarRoupas = 195;
+    return quantidade * litrosLavarRoupas;
 }
 
 function escovarDestes(quantidade) {
-    const litros = 4.8;
-    return quantidade * litros
+    const litrosEscovarDestes = 4.8;
+    return quantidade * litrosEscovarDestes;
 }
 
 function descarga(quantidade) {
