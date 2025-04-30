@@ -1,4 +1,3 @@
-
 function calcularQuantidadeArvores(litros) {
     const litrosPorArvore = 100; // alterar para o numero real
     return litros / litrosPorArvore;
