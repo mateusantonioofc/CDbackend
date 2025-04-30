@@ -1,5 +1,5 @@
 document.getElementById('form').addEventListener('submit', function(event) { // lembrete: trocar para o id do form
-    
+    const duracaoBanho = document.getElementById('id').value;
 });
 
 function calcularQuantidadeArvores(litros) {
