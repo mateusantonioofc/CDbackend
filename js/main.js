@@ -1,23 +1,9 @@
-const banho = 9;
-const louca = 7;
-const descarga = 12;
+console.log(banho(5, 15));
 
-function banho(quantidade) {
-    return quantidade * banho;
-}
 
-function descarga(quantidade) {
-    return quantidade * descarga;
-}
+function banho(quantidade, duracao) {
+    const duracaoTotal = quantidade * duracao;
+    const litrosPorMinuto = 9;
 
-function descarga(quantidade) {
-    return quantidade * descarga;
-}
-
-function descarga(quantidade) {
-    return quantidade * descarga;
-}
-
-function descarga(quantidade) {
-    return quantidade * descarga;
+    return litrosPorMinuto * duracaoTotal;
 }
