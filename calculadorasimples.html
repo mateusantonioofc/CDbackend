@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Sustentável</title>
+  <link rel="stylesheet" href="css/calculadorasimples.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌱 Calculadora de Consumo de Água</h1>
+    
+    <div class="formulario">
+      <label for="atividade">Atividade:</label>
+      <select id="atividade">
+        <option value="banho">Banho</option>
+        <option value="louca">Lavar louça</option>
+        <option value="lavarmaos">Lavar as mãos</option>
+        <option value="dentes">Escovar os dentes</option>
+        <option value="roupa">Lavar roupa</option>
+      </select>
+
+      <label for="quantidade">Quantas vezes:</label>
+      <input type="number" id="quantidade" value="1" min="1">
+
+      <label for="duracao">Duracao:</label>
+      <input type="number" id="duracao" value="1" min="1">
+
+      <button onclick="calcularArvores()">Calcular</button>
+
+      <div id="resultado"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
