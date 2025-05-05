@@ -149,7 +149,6 @@ body {
     padding: 14px 24px;
   }
 }
-
 @media (max-width: 480px) {
   body {
     padding: 10px;
@@ -162,11 +161,23 @@ body {
   .botaomeio2 {
     font-size: 18px;
     padding: 16px 24px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btn {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
   }
 
   .textoformulario {
     font-size: 16px;
     padding: 16px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .botoes .criarconta {
