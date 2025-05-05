@@ -15,27 +15,27 @@
     <h3>Calculadora</h3>
     <form id="calculatorForm">
       <label for="banhos">Quantos banhos toma por dia?</label>
-      <input type="number" id="banhos" name="banhos" min="0">
+      <input type="number" id="banhos" name="banhos" min="1">
       <label for="minutosBanho">Duração média (minutos):</label>
-      <input type="number" id="minutosBanho" name="minutosBanho" min="0">
+      <input type="number" id="minutosBanho" name="minutosBanho" min="1">
       <label for="louca">Quantas vezes lava a louça por dia?</label>
-      <input type="number" id="louca" name="louca" min="0">
+      <input type="number" id="louca" name="louca" min="1">
       <label for="minutosLouca">Duração média (minutos):</label>
-      <input type="number" id="minutosLouca" name="minutosLouca" min="0">
+      <input type="number" id="minutosLouca" name="minutosLouca" min="1">
       <label for="maos">Quantas vezes lava as mãos por dia?</label>
-      <input type="number" id="maos" name="maos" min="0">
+      <input type="number" id="maos" name="maos" min="1">
       <label for="minutosMaos">Duração média (minutos):</label>
-      <input type="number" id="minutosMaos" name="minutosMaos" min="0">
+      <input type="number" id="minutosMaos" name="minutosMaos" min="1">
       <label for="dentes">Quantas vezes escova os dentes por dia?</label>
-      <input type="number" id="dentes" name="dentes" min="0">
+      <input type="number" id="dentes" name="dentes" min="1">
       <label for="minutosDentes">Duração média (minutos):</label>
-      <input type="number" id="minutosDentes" name="minutosDentes" min="0">
+      <input type="number" id="minutosDentes" name="minutosDentes" min="1">
       <label for="roupa">Quantas vezes lava a roupa por semana?</label>
-      <input type="number" id="roupa" name="roupa" min="0">
+      <input type="number" id="roupa" name="roupa" min="1">
       <label for="descarga">Quantas vezes usa a descarga por dia?</label>
-      <input type="number" id="descarga" name="descarga" min="0">
+      <input type="number" id="descarga" name="descarga" min="1">
       <p id="errorMessage" class="error-message"></p>
-      <button type="button" onclick="validateInputs()">Calcular</button>
+      <button type="button" onclick="calculateWaterUsage()">Calcular</button>
     </form>
     <p id="resultadoConsumo" style="color: #33CC33; font-weight: bold;"></p>
   </div>
