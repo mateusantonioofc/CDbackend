@@ -2,35 +2,35 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora Sustentável</title>
   <link rel="stylesheet" href="css/calculadorasimples.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🌱 Calculadora de Consumo de Água</h1>
-    
-    <div class="formulario">
-      <label for="atividade">Atividade:</label>
+  <div class="header-box">
+    <h1>Calculadora Ecológica</h1>
+    <h2>Simples</h2>
+  </div>
+  <div class="calculator-box">
+    <h3>Calculadora</h3>
+    <form id="calculatorForm">
+      <label for="atividade">Selecione uma Atividade:</label>
       <select id="atividade">
         <option value="banho">Banho</option>
         <option value="louca">Lavar louça</option>
+        <option value="lavarmaos">Lavar roupas</option>
         <option value="lavarmaos">Lavar as mãos</option>
         <option value="dentes">Escovar os dentes</option>
-        <option value="roupa">Lavar roupa</option>
       </select>
-
-      <label for="quantidade">Quantas vezes:</label>
+      <label for="quantidade">Quantas vezes (por dia):</label>
       <input type="number" id="quantidade" value="1" min="1">
-
-      <label for="duracao">Duracao:</label>
+      <label for="duracao">Duração (minutos):</label>
       <input type="number" id="duracao" value="1" min="1">
-
-      <button onclick="calcularArvores()">Calcular</button>
-
-      <div id="resultado"></div>
-    </div>
+      <p id="errorMessage" class="error-message"></p>
+      <button type="button" onclick="calcularArvores()">Calcular</button>
+    </form>
+    <p id="resultado" style="color: #33CC33; font-weight: bold;"></p>
   </div>
-
   <script src="js/main.js"></script>
 </body>
 </html>

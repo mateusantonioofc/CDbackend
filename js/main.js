@@ -1,11 +1,11 @@
 const litrosPorArvore = 1000;
 
 const ConsumoAgua = { 
-    banho: { litrosPorMinuto: 9, perMin: true },
-    louca: { litrosPorMinuto: 7, perMin: true },
-    lavarmaos: { litrosPorMinuto: 7, perMin: true },
-    dentes: { litros: 4.8, perMin: false },
-    roupa: { litros: 195, perMin: false }
+    banho: { litrosPorMinuto: 9, duracao: true },
+    louca: { litrosPorMinuto: 7, duracao: true },
+    lavarmaos: { litrosPorMinuto: 0.5, duracao: true },
+    dentes: { litros: 4.8, duracao: true },
+    roupas: { litrosPorMinuto: 195, duracao: false },
 };
 
 function getValue(id) {
@@ -19,7 +19,7 @@ function calcularLitros(atividade, quantidade, duracao = 1) {
   
   if (!tipoAtividade) return "❌️ Atividade não encontrada"; 
   
-  if (tipoAtividade.perMin) {
+  if (tipoAtividade.duracao) {
     const minutosTotais = quantidadeAtividade * duracaoAtividade;
     return (minutosTotais * tipoAtividade.litrosPorMinuto).toFixed(1);
   } else {
@@ -28,7 +28,7 @@ function calcularLitros(atividade, quantidade, duracao = 1) {
 }
 
 function calcularArvores() {
-    const DIAS = 7;
+    const DIAS = 30;
 
     const atividade = document.getElementById('atividade').value;
     const quantidade = getValue("quantidade");
