@@ -1,4 +1,5 @@
 const litrosPorArvore = 1000;
+const DIAS = 30;
 
 const ConsumoAgua = { 
     banho: { litrosPorMinuto: 9, duracao: true },
@@ -28,8 +29,6 @@ function calcularLitros(atividade, quantidade, duracao = 1) {
 }
 
 function calcularArvores() {
-    const DIAS = 30;
-
     const atividade = document.getElementById('atividade').value;
     const quantidade = getValue("quantidade");
     const duracao = getValue("duracao");

@@ -19,12 +19,12 @@ function validateInputs() {
 }
 
 function calculateWaterUsage() {
-  const litrosPorMinutoBanho = 12;
-  const litrosPorMinutoLouca = 10;
-  const litrosPorMinutoMaos = 2;
-  const litrosPorMinutoDentes = 2;
+  const litrosPorMinutoBanho = 9;
+  const litrosPorMinutoLouca = 7;
+  const litrosPorMinutoMaos = 0.5;
+  const litrosPorMinutoDentes = 4.8;
   const litrosPorDescarga = 6;
-  const litrosPorRoupa = 120;
+  const litrosPorRoupa = 195;
 
   const banhos = parseInt(document.getElementById('banhos').value) || 0;
   const minutosBanho = parseInt(document.getElementById('minutosBanho').value) || 0;
@@ -47,8 +47,7 @@ function calculateWaterUsage() {
       louca * minutosLouca * litrosPorMinutoLouca +
       maos * minutosMaos * litrosPorMinutoMaos +
       dentes * minutosDentes * litrosPorMinutoDentes +
-      descarga * litrosPorDescarga * 30 +
-      (roupa * litrosPorRoupa * 4)) * 30;
+      descarga * litrosPorDescarga) * 30 + (roupa * litrosPorRoupa * 4);
 
   const consumoFormatado = consumoMensal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
