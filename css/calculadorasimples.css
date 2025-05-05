@@ -87,3 +87,35 @@ button:hover {
     width: 95%;
   }
 }
+
+@media (max-width: 480px) {
+  .header-box {
+    padding: 15px;
+  }
+
+  .header-box h1 {
+    font-size: 20px;
+  }
+
+  .header-box h2 {
+    font-size: 16px;
+  }
+
+  .calculator-box {
+    padding: 15px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input, select {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

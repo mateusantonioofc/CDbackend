@@ -109,4 +109,38 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .cima {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .minhalogo {
+        max-height: 100px;
+    }
+
+    .botoes .criarconta {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .textoformulario {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .botaomeio2 {
+        font-size: 16px;
+        padding: 10px 40px;
+    }
+
+    .btn {
+        gap: 10px;
+    }
+}
+
 
