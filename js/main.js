@@ -1,41 +1,34 @@
-document.getElementById('form').addEventListener('submit', function(event) { // lembrete: trocar para o id do form
-    const duracaoBanho = document.getElementById('id').value;
-});
+const litrosPorArvore = 1000;
 
-function calcularQuantidadeArvores(litros) {
-    const litrosPorArvore = 1000;
-    return litros / litrosPorArvore;
+const ConsumoAgua = {
+  banho: { litrosPorMinuto: 9, perMin: true },
+  louca: { litrosPorMinuto: 7, perMin: true },
+  lavarmaos: { litrosPorMinuto: 7, perMin: true },
+  descarga: { litros: 12, perMin: false },
+  dentes: { litros: 4.8, perMin: false },
+  roupa: { litros: 195, perMin: false }
 }
 
-function banho(quantidade, duracao) {
-    const duracaoTotal = quantidade * duracao;
-    const litrosPorMinuto = 9;
-
-    return litrosPorMinuto * duracaoTotal;
+function getValue(id) {
+  return parseInt(document.getElementById(id).value);
 }
 
-function lavarLouca(quantidade, duracao) {
-    const duracaoTotal = quantidade * duracao;
-    const litrosPorMinuto = 7;
-    return litrosPorMinuto * litrosPorMinuto;
+function calcularLitros(atividade, quantidade, duracao = 1) {
+  const tipoAtividade = ConsumoAgua[atividade];
+  const quantidadeAtividade = parseInt(quantidade);
+  const duracaoAtividade = parseInt(duracao);
+  
+  if (!tipoAtividade) return "❌️ Atividade não encontrada"; 
+  
+  if (tipoAtividade.perMin) {
+    const minutosTotais = quantidadeAtividade * duracaoAtividade;
+    return (minutosTotais * tipoAtividade.litrosPorMinuto).toFixed(1);
+  } else {
+    return (quantidadeAtividade * tipoAtividade.litros).toFixed(1);
+  }
 }
 
-function lavarMaos(quantidade) {
-    const litrosLavarMaos = 7;
-    return quantidade * litrosLavarMaos;
-}
-
-function lavarRoupas(quantidade) {
-    const litrosLavarRoupas = 195;
-    return quantidade * litrosLavarRoupas;
-}
-
-function escovarDestes(quantidade) {
-    const litrosEscovarDestes = 4.8;
-    return quantidade * litrosEscovarDestes;
-}
-
-function descarga(quantidade) {
-    const litrosPorMinuto = 12;
-    return quantidade * litrosPorMinuto;
+function calcularArvores(totalLitros) {
+  const litros = parseInt(totalLitros);
+  return (litros / litrosPorArvore).toFixed(1)
 }
