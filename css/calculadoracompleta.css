@@ -3,6 +3,9 @@
   outline: green;
 }
 
+#resultadoConsumo {
+  font-size: 30px;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
