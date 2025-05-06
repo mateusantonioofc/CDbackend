@@ -1,35 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora Sustentável</title>
-  <link rel="stylesheet" href="css/calculadorasimples.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVE sustentável</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="header-box">
-    <h1>Calculadora Ecológica</h1>
-    <h2>Simples</h2>
-  </div>
-  <div class="calculator-box">
-    <h3>Calculadora</h3>
-    <form id="calculatorForm">
-      <label for="atividade">Selecione uma Atividade:</label>
-      <select id="atividade">
-        <option value="banho">Banho</option>
-        <option value="louca">Lavar louça</option>
-        <option value="lavarmaos">Lavar as mãos</option>
-        <option value="dentes">Escovar os dentes</option>
-      </select>
-      <label for="quantidade">Quantas vezes (por dia):</label>
-      <input type="number" id="quantidade" value="1" min="1">
-      <label for="duracao">Duração (minutos):</label>
-      <input type="number" id="duracao" value="1" min="1">
-      <p id="errorMessage" class="error-message"></p>
-      <button type="button" onclick="calcularArvores()">Calcular</button>
-    </form>
-    <p id="resultado" style="color: #33CC33; font-weight: bold;"></p>
-  </div>
-  <script src="js/main.js"></script>
+    <div class="cima">
+        <img src="img/logo.png" alt="minhalogo" class="minhalogo">
+        <div class="botoes"> 
+            <a href="quemsomos.html">
+                <button class="criarconta">Quem somos ?</button>
+            </a>
+        </div>
+    </div>
+    <div class="meio">
+        <div class="textoformulario">
+            <p>
+                Preencha o formulário abaixo para fazer parte da NAVE Sustentável. Com suas informações, podemos te ajudar a entender melhor o seu consumo de água e mostrar como pequenas mudanças no dia a dia podem fazer uma grande diferença para o planeta.
+            </p>
+            <p>
+                Juntos, vamos construir um futuro mais verde, consciente e cheio de atitude. 💧🌱
+            </p>
+        </div>
+        <div class="btn">
+            <a href="calculadorasimples.html"><button class="botaomeio2">Calculadora Simples</button></a>
+            <a href="calculadoracompleta.html"><button class="botaomeio2">Calculadora Completa</button></a>
+        </div>
+    </div>
 </body>
 </html>
