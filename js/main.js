@@ -5,7 +5,7 @@ const ConsumoAgua = {
     banho: { litrosPorMinuto: 9, duracao: true },
     louca: { litrosPorMinuto: 7, duracao: true },
     lavarmaos: { litrosPorMinuto: 0.5, duracao: true },
-    dentes: { litros: 4.8, duracao: true },
+    dentes: { litrosPorMinuto: 4.8, duracao: true },
     roupas: { litrosPorMinuto: 195, duracao: false },
 };
 
@@ -23,7 +23,7 @@ function calcularLitros(atividade, quantidade, duracao = 1) {
   if (tipoAtividade.duracao) {
     const minutosTotais = quantidadeAtividade * duracaoAtividade;
     return (minutosTotais * tipoAtividade.litrosPorMinuto).toFixed(1);
-  } else {
+  } else if(!tipoAtividade.duracao) {
     return (quantidadeAtividade * tipoAtividade.litros).toFixed(1);
   }
 }
@@ -33,9 +33,10 @@ function calcularArvores() {
     const quantidade = getValue("quantidade");
     const duracao = getValue("duracao");
 
-    const litros = calcularLitros(atividade, quantidade, duracao) * DIAS;
+    const litros = calcularLitros(atividade, quantidade, duracao);
+    const litrosMensal = litros * DIAS;
 
     console.log()
     document.getElementById("resultado").textContent = 
-        `💧 Consumo em 1 mês: ${litros} litros — 🌳 Equivalente a ${((litros / litrosPorArvore) * DIAS).toFixed(2)} árvores por mês.`;
+        `💧 Consumo em 1 mês: ${litrosMensal} litros 🌳—  Equivalente a ${((litrosMensal / litrosPorArvore)).toFixed(2)} árvores por mês.`;
 }
