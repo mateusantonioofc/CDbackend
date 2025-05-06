@@ -33,9 +33,9 @@ function calcularArvores() {
     const quantidade = getValue("quantidade");
     const duracao = getValue("duracao");
 
-    const litros = calcularLitros(atividade, quantidade, duracao);
+    const litros = calcularLitros(atividade, quantidade, duracao) * DIAS;
 
     console.log()
     document.getElementById("resultado").textContent = 
-        `💧 Consumo em 1 mês: ${litros * DIAS} litros — 🌳 Equivalente a ${((litros / litrosPorArvore) * DIAS).toFixed(2)} árvores por mês.`;
+        `💧 Consumo em 1 mês: ${litros} litros — 🌳 Equivalente a ${((litros / litrosPorArvore) * DIAS).toFixed(2)} árvores por mês.`;
 }
