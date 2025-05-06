@@ -1,3 +1,10 @@
+*{
+  
+  outline: green;
+}
+
+
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -38,6 +45,11 @@ body {
   border-radius: 16px;
   text-align: left;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+}
+
+
+  
 }
 
 label {
@@ -119,3 +131,18 @@ button:hover {
     padding: 8px 16px;
   }
 }
+
+input[type="number"]:hover{
+  
+  margin-left: 10px;
+  transition: 1s;
+  
+}
+
+input[type="number"]:{
+  
+  margin-left: 0px;
+  transition: 1s;
+  
+}
+
