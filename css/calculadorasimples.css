@@ -13,6 +13,9 @@ body {
   text-align: center;
 }
 
+#resultado {
+  font-size: 30px;
+}
 .header-box {
   background-color: #66bb6a;
   color: white;
