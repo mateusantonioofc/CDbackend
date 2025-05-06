@@ -52,5 +52,5 @@ function calculateWaterUsage() {
   const consumoFormatado = consumoMensal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   const resultadoConsumo = document.getElementById('resultadoConsumo');
-  resultadoConsumo.textContent = `💧 Consumo em 1 mês: ${consumoFormatado} litros — 🌳 Equivalente a ${(consumoMensal / litrosPorArvore).toFixed(2)} árvores por mês.`
+  resultadoConsumo.textContent = `💧 Consumo em 1 mês: ${consumoFormatado} litros — 🌳 Equivalente a ${Math.ceil(consumoMensal / litrosPorArvore)} árvores por mês.`
 }
